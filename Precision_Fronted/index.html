@@ -10,10 +10,28 @@
 
 <body>
 
+  <div class="sec">
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form id="loginform">
+      <h3>Login Here</h3>
+      <h2>NOTE:</h2>
+      <h1>Please check your email for the code.</h1>
+
+      <input type="text" placeholder="Enter Your Code" id="otp" maxlength="4"  autocomplete="off">
+
+      <button type="submit" id="log">Log In</button>
+    </form>
+</div>
+
+<div id="main_Menu">
+
   <ul>
     <div id="time" class="container">Click "<b>Stop Timmer</b>" button when timmer reaches <b>10sec</b></div>
     <br>
-
+    
     <div class="container">
       <div id="timer-container">
         <div id="timer"></div>
@@ -22,12 +40,13 @@
       <button id="stopButton" onclick="stopTimer()">Stop Timer</button>
       <div id="results"></div>
       <br />
-
+      
       <a id="next" href="http://localhost:3000/task4"></a>
-
+      
     </div>
   </ul>
-
+</div>
+  
   <audio id="startSound">
     <source src="sound1.mp3" type="audio/mpeg">
   </audio>
