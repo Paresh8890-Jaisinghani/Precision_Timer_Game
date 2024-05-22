@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #6289bd;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+#timer-container {
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-size: 36px;
+  padding: 20px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background-color: #6289bd;
+  color: #fff;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
+#startButton {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#startButton:hover {
+  background-color: #c0392b;
+}
+
+#stopButton {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#stopButton:hover {
+  background-color: #c0392b;
+}
+
+#next {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+a{
+  text-decoration: none;
+}
+
+#next:hover {
+  background-color: #c0392b;
+}
+
+#results {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: none;
+  }
+}

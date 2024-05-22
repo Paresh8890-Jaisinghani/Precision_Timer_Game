@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <ul>
+    <div id="time" class="container">Click "<b>Stop Timmer</b>" button when timmer reaches <b>10sec</b></div>
+    <br>
+
+    <div class="container">
+      <div id="timer-container">
+        <div id="timer"></div>
+      </div>
+      <button id="startButton" onclick="startTimer()">Start Timer</button>
+      <button id="stopButton" onclick="stopTimer()">Stop Timer</button>
+      <div id="results"></div>
+      <br />
+
+      <a id="next" href="http://localhost:3000/task4"></a>
+
+    </div>
+  </ul>
+
+  <audio id="startSound">
+    <source src="sound1.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="stopSound">
+    <source src="sound2.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="../Precision_Backend/script.js"></script>
+
+</body>
+
+</html>
