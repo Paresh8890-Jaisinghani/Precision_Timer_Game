@@ -102,7 +102,12 @@ function stopTimer() {
   const seconds = (elapsedTime / 1000).toFixed(3);
   const difference = (seconds - targetTime);
   testResults.push(difference.toFixed(3));
-  document.getElementById('results').innerHTML += `Test Result: ${difference.toFixed(3)}s<br>`;
+  if(difference.toFixed(3) < 0){
+    document.getElementById('results').innerHTML += `Preceding : ${difference.toFixed(3)}s<br>`;
+  }
+  else{
+    document.getElementById('results').innerHTML += `Lagging  : ${difference.toFixed(3)}s<br>`;
+  }
   document.getElementById("startButton").disabled = false;
   document.getElementById("stopButton").disabled = true;
   start++;
@@ -119,7 +124,7 @@ function stopTimer() {
     document.getElementById('stopButton').style.display = 'none';
     document.getElementById('next').style.display = 'block';
     document.getElementById('time').innerHTML = '"Hey Great, you have completed the test"'
-    document.getElementById('next').innerHTML += 'Click here for next test';
+    document.getElementById('next').innerHTML += 'Next';
     document.getElementById("startSound").muted = true;
     document.getElementById("stopSound").muted = true;
     final();

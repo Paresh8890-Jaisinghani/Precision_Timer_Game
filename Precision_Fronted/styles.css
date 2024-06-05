@@ -160,7 +160,7 @@ Form Style */
 
 
 .sec form{
-  height: 440px;
+  height: 430px;
   width: 350px;
   background-color: rgba(255,255,255,0.13);
   position: absolute;
@@ -208,7 +208,7 @@ Form Style */
   background-color: rgba(255,255,255,0.07);
   border-radius: 3px;
   border: 1px solid white;
-  padding: 0 5px;
+  padding: 0 7px;
   margin-top: 60px;
   font-size: 14px;
   font-weight: 300;
