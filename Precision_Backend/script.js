@@ -103,10 +103,10 @@ function stopTimer() {
   const difference = (seconds - targetTime);
   testResults.push(difference.toFixed(3));
   if(difference.toFixed(3) < 0){
-    document.getElementById('results').innerHTML += `Preceding : ${difference.toFixed(3)}s<br>`;
+    document.getElementById('results').innerHTML += `Early : ${difference.toFixed(3)}s<br>`;
   }
   else{
-    document.getElementById('results').innerHTML += `Lagging  : ${difference.toFixed(3)}s<br>`;
+    document.getElementById('results').innerHTML += `Late  : ${difference.toFixed(3)}s<br>`;
   }
   document.getElementById("startButton").disabled = false;
   document.getElementById("stopButton").disabled = true;
