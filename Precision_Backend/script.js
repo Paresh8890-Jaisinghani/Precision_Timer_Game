@@ -13,6 +13,17 @@ const sec = document.querySelector(".sec");
 
 let otp
 
+let isNavigatingAway = false; // Flag to track if the user clicked the "Next" button
+
+// Function to warn the user before reloading or leaving the page
+function warnUserBeforeReload(event) {
+    if (!isNavigatingAway) {
+        const confirmationMessage = "If you reload the page, your score will be deleted.";
+        (event || window.event).returnValue = confirmationMessage; // Standard for most browsers
+        return confirmationMessage; // Required for some older browsers
+    }
+}
+
 loginform.addEventListener("submit", async function(event){
   event.preventDefault();
   const temp = number.value;
@@ -42,6 +53,7 @@ loginform.addEventListener("submit", async function(event){
       sec.style.display = "none";
       mainMenu.style.display = "flex";
       alert("You are logged in successfully.");
+      window.addEventListener("beforeunload",warnUserBeforeReload)
   } catch (err) {
       console.error('Error logging in:', err.message);
       alert("An error occurred. Please try again.");
@@ -94,6 +106,13 @@ function updateTimer() {
   document.getElementById('timer').textContent = seconds + 's';
 }
 
+function navigateToNext() {
+  isNavigatingAway = true;
+  
+  window.location.href = "http://localhost:3002/traffic"; // Replace with the actual URL of the next page
+  
+}
+
 function stopTimer() {
   document.getElementById('startButton').style.display = 'initial';
   clearInterval(timerInterval);
@@ -114,6 +133,7 @@ function stopTimer() {
 
 
 
+  
   if(start == 3){
     // audio1.pause();
     document.getElementById("startButton").disabled = true;
@@ -125,6 +145,7 @@ function stopTimer() {
     document.getElementById('next').style.display = 'block';
     document.getElementById('time').innerHTML = '"Hey Great, you have completed the test"'
     document.getElementById('next').innerHTML += 'Next';
+    document.getElementById('next').addEventListener("click",navigateToNext)
     document.getElementById("startSound").muted = true;
     document.getElementById("stopSound").muted = true;
     final();
