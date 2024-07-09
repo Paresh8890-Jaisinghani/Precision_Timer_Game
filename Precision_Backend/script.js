@@ -106,6 +106,8 @@ function updateTimer() {
   document.getElementById('timer').textContent = seconds + 's';
 }
 
+
+
 function navigateToNext() {
   isNavigatingAway = true;
   

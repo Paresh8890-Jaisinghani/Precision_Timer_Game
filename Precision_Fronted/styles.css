@@ -18,6 +18,11 @@ body {
   margin: 0;
 }
 
+#time{
+  border: 3px solid black;
+  font-size: 15px;
+}
+
 
 .container {
   text-align: center;
