@@ -127,7 +127,8 @@ function stopTimer() {
     document.getElementById('results').innerHTML += `Early : ${difference.toFixed(3)}s<br>`;
   }
   else{
-    document.getElementById('results').innerHTML += `Late  : ${difference.toFixed(3)}s<br>`;
+    
+    document.getElementById('results').innerHTML += `Late  : ${"+" + difference.toFixed(3)}s<br>`;
   }
   document.getElementById("startButton").disabled = false;
   document.getElementById("stopButton").disabled = true;
